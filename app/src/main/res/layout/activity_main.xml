@@ -7,12 +7,146 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="Remaining time: "
+        android:textColor="@color/black"
+
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCountDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="@color/black"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/bomb1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/bomb"
+            android:onClick="increaseScoreByOne"/>
+
+        <ImageView
+            android:onClick="increaseScoreByOne"
+            android:id="@+id/bomb2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/bomb" />
+
+        <ImageView
+            android:onClick="increaseScoreByOne"
+            android:id="@+id/bomb3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/bomb" />
+
+        <ImageView
+            android:onClick="increaseScoreByOne"
+            android:id="@+id/bomb4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/bomb" />
+
+        <ImageView
+            android:onClick="increaseScoreByOne"
+            android:id="@+id/bomb5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/bomb" />
+
+        <ImageView
+            android:onClick="increaseScoreByOne"
+            android:id="@+id/bomb6"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="2"
+            app:layout_row="1"
+            app:srcCompat="@drawable/bomb" />
+
+        <ImageView
+            android:onClick="increaseScoreByOne"
+            android:id="@+id/bomb7"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@drawable/bomb" />
+
+        <ImageView
+            android:onClick="increaseScoreByOne"
+            android:id="@+id/bomb8"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="1"
+            app:layout_row="2"
+            app:srcCompat="@drawable/bomb" />
+
+        <ImageView
+            android:onClick="increaseScoreByOne"
+            android:id="@+id/bomb9"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_column="2"
+            app:layout_row="2"
+            app:srcCompat="@drawable/bomb" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Score: "
+        android:textColor="@color/black"
+
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
